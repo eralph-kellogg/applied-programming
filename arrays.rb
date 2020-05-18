@@ -11,3 +11,14 @@ suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
 #     puts "#{rank} of #{suit}"
 #   end
 # end
+
+deck = []
+
+for rank in ranks
+   for suit in suits
+      puts "#{rank}_of_#{suit}"
+        deck << "#{rank}_of_#{suit}"
+   end
+
+ end
+puts deck.inspect

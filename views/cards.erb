@@ -26,14 +26,17 @@
       <h1>KIEI-451 Casino!</h1>
 
       <div class="row">
+<% @deck.shuffle! %>
         <%# Remove the hard-coding and have this come from a "deck" of cards %>
-        <div class="col-sm-3"><img class="img-fluid" src="/images/cards/queen_of_hearts.png"></div>
-        <div class="col-sm-3"><img class="img-fluid" src="/images/cards/queen_of_diamonds.png"></div>
-        <div class="col-sm-3"><img class="img-fluid" src="/images/cards/queen_of_clubs.png"></div>
-        <div class="col-sm-3"><img class="img-fluid" src="/images/cards/queen_of_spades.png"></div>
+        <div class="col-sm-3"><img class="img-fluid" src="/images/cards/<%= @deck[0] %>.png"></div>
+        <div class="col-sm-3"><img class="img-fluid" src="/images/cards/<%= @deck[1] %>.png"></div>
+        <div class="col-sm-3"><img class="img-fluid" src="/images/cards/<%= @deck[2] %>.png"></div>
+        <div class="col-sm-3"><img class="img-fluid" src="/images/cards/<%= @deck[3] %>.png"></div>
+        <div class="col-sm-3"><img class="img-fluid" src="/images/cards/<%= @deck[4] %>.png"></div>
       </div>
 
       <%# Add a "deal again" button %>
+      <a href="/" class="btn btn-success"> Deal Again </a>
     </div>
 
     <!-- Optional JavaScript -->

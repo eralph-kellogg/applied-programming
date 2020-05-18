@@ -38,3 +38,28 @@ puts "Jeff's KelloggCoin balance is #{jeffs_balance}"
 # and you're itching for more, think about if there other ways to implement the solution that 
 # are more flexible; i.e. what if we added someone new to the blockchain? is there a way to 
 # do this where we wouldn't have to rewrite the code?
+
+for transaction in blockchain
+    #transaction is a hash
+    #to user increment
+    if transaction[:to_user] == "brian"
+        brians_balance = brians_balance + transaction[:amount]
+    elsif transaction[:to_user] == "ben"
+        bens_balance = bens_balance + transaction[:amount]
+    elsif transaction[:to_user] == "jeff"
+        jeffs_balance = jeffs_balance + transaction[:amount]
+    end
+
+    #from user decrease
+        if transaction[:from_user] == "brian"
+        brians_balance = brians_balance - transaction[:amount]
+    elsif transaction[:from_user] == "ben"
+        bens_balance = bens_balance - transaction[:amount]
+    elsif transaction[:from_user] == "jeff"
+        jeffs_balance = jeffs_balance - transaction[:amount]
+    end
+end
+
+puts "Brian's KelloggCoin balance is #{brians_balance}"
+puts "Ben's KelloggCoin balance is #{bens_balance}"
+puts "Jeff's KelloggCoin balance is #{jeffs_balance}"

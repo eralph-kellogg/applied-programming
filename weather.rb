@@ -7,6 +7,7 @@ forecast = HTTParty.get(url).parsed_response.to_hash
 # use instead of `puts` to make reading a hash a lot easier
 # pp forecast
 
+ puts forecast["current"]["temp"]
 # Example output:
 #
 # It is currently 54.86 degrees and Clear
